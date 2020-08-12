@@ -67,5 +67,5 @@ Coint and Johansen tests showed that there is correlation between earth surface 
 
 ## Project presentation link:
 
-https://docs.google.com/spreadsheets/d/1pmSGwP-IvdLDpKhyXfn7sl3eWXwaCsxy-7t5gjiHA9c/edit#gid=601231408
+https://docs.google.com/presentation/d/181Kq0P_UphGJjV9j2gTVnUUjM4On7hDtWYTgI2cVjgM/edit?usp=sharing
 
