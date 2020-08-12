@@ -51,21 +51,19 @@ Global warming is a top topic of common concern. It is important to understand h
 
 ### Third industrial revolution time (1950s) is watershed for global warming:
 
-Analysis showed that the third industrial revolution time (1950s) is a watershed. Before third industrial revolution, the earth surface temperature increased slowly, only 8% over 200 years. But after third industrial revolution, earth surface temperature increased another 12% for recent 60 years. Coincidentally, carbon dioxide concentration increase also accelerate after 1950s. Between 1750s to 1950s, the carbon dioxide concentration in air increased around12%, but from 1950s to 2010s, it raised another 30%. This is a hint that carbon dioxide is related to earth surface temperature. Carbon dioxide is the major greenhouse gas that contribute to global warming, most people believe so although it not 100% sure that carbon dioxide emission caused the global warming.
+Analysis showed that the third industrial revolution time (1950s) is a watershed. Before third industrial revolution, the earth surface temperature increased slowly, only 8% over 200 years. But after third industrial revolution, earth surface temperature increased another 12% for recent 60 years. Coincidentally, carbon dioxide concentration increase also accelerate after 1950s. Between 1750s to 1950s, the carbon dioxide concentration in air increased around12%, but from 1950s to 2010s, it raised another 30%. This is a hint that carbon dioxide is related to earth surface temperature. Carbon dioxide is the major greenhouse gas that contribute to global warming, most people believe so although it not 100% sure that carbon dioxide emission caused the global warming. 
+
+A graph is shown as following: 
 
 ![image](https://user-images.githubusercontent.com/64159084/89968826-e5c34580-dc22-11ea-8502-5909935cd723.png)
 
-### Accuracy and F1 score metrics are appropriate in this project:
+### Very good forecast results can be given by ARIMA:
 
-The metrics we used to evaluate our models are the accuracy score and weighted f1 score, as shown in section 4. We have 8 categories of negative reviews (RudeService, SlowService, OrderProblem, BadFood, BadNeighborhood, Filthy, MissingFood and Cost) in this case, and they are highly imbalanced (the major 2 classes are 'RudeService' and 'SlowService' and account for 52% of all negative reviews; while the minor classes, 'MissingFood' or 'Cost' for example, account for just around 2% of all negative reviews). In our case, after thorough discussion, we are not leaning to any specific class. Although BadNeighborhood and Cost problems may not be easily solved by the restaurant manager, all other classes are very important from management point of view. So precision and recall are not what we prioritized as our evaluation metrics. We used an accuracy score and a weighted f1 socre as metrics to evaluate models. We used weighted f1 score because we want to take the class imbalance into account, and calculate the metric for each label and find their average weighted by support(number of true predictions for each class label).
+Using time series modeling (ARIMA and SARIMAX), earth surface temperature can be relatively accurately forecasted. In section 4, metrics mean absolute error, mean square error and root mean square error were used to evaluate forecast results. The best result for 11 years forecast gave MSE: 0.016, RMSE: 0.128 and MAE: 0.102. Comparing to real observations value around 9 celcius from 2004 to 2015, this error is very tiny.
 
-### Stemming works better than lemmatization in this review data case:
+### CO2 concentration change and world urban population change are related to earth surface temperature change:
 
-The way we preprocess the data really has an influence on prediction. The way the corpus is preprocessed will differentiate the results. For example, in this project, we found out that stemming works better than lemmatization while normally lemmatization will do a better job than stemming. This is because we are dealing with Yelp reviews. When writing Yelp reviews, many people do not pay attention to proper grammar rules, some times not even completing words, they don't fully complete their sentances and they are trying to write as simple as possible as long as they can express their dissatisfaction. In this particular case, it makes sense that stemming works better. Thus, in NLP, data scientists shall firstly look into the corpus, understand how the texts look like and then determine which preprocessing steps make sense.
-
-### The classifier model developed in this project can be used to classify negative reviews of similar fast food restaurant (KFC, Burger King, etc), here is a sample classification of KFC reviews (data from Yelp API): 
-
-![Screen Shot 2020-07-30 at 9 30 22 PM](https://user-images.githubusercontent.com/64159084/88990479-0945d200-d2ac-11ea-9801-380a966aab86.png)
+Coint and Johansen tests showed that there is correlation between earth surface temperature raise and carbon dioxide concentration raise. And there may also be correlation between earth surface temperature and world urban population (number of observations are limited since world population data does not contain data before 1950). These are consistent with explanatory analysis in project. The world total population and rural population raise are not considered correlated to earth surface temperature raise as shown by hypothesis tests.
 
 ## Project presentation link:
 
