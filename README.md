@@ -53,7 +53,7 @@ Global warming is a top topic of common concern. It is important to understand h
 
 Analysis showed that the third industrial revolution time (1950s) is a watershed. Before third industrial revolution, the earth surface temperature increased slowly, only 8% over 200 years. But after third industrial revolution, earth surface temperature increased another 12% for recent 60 years. Coincidentally, carbon dioxide concentration increase also accelerate after 1950s. Between 1750s to 1950s, the carbon dioxide concentration in air increased around12%, but from 1950s to 2010s, it raised another 30%. This is a hint that carbon dioxide is related to earth surface temperature. Carbon dioxide is the major greenhouse gas that contribute to global warming, most people believe so although it not 100% sure that carbon dioxide emission caused the global warming.
 
-
+![image](https://user-images.githubusercontent.com/64159084/89968826-e5c34580-dc22-11ea-8502-5909935cd723.png)
 
 ### Accuracy and F1 score metrics are appropriate in this project:
 
