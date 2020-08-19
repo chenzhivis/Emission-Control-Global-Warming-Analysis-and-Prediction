@@ -1,13 +1,13 @@
 # Global-Warming-Analysis-and-Prediction
 
 ## Brief background
-Global warming is a top topic of common concern. It is important to understand how is earth surface temperature changing, the trend and to predict, which has guiding significance to many fields (agriculture, energy-efficiency, emmission control, restructuring energy industry, etc). To predict future earth surface temperature can be pure time series problem, but global warming is also related to other factors, such as greenhouse emission, human activities, etc. In this project, I am trying to analyze the earth surface temperature trend, develop a model to predict future temperature and also analyze how another features (CO2, population) influence the global warming.
+Global warming is a top topic of common concern. It is important to understand how is earth surface temperature changing, the trend and to predict, which has guiding significance to many fields (agriculture, energy-efficiency, emmission control, restructuring energy industry, etc). To predict future earth surface temperature can be pure time series problem, but global warming is also related to other factors, such as greenhouse gases emission, human activities, etc. In this project, I used various time series models, cointegration & granger causality analysis to analyze the earth surface temperature change, develop a model to predict future temperature and also analyze how other features (CO2, population) influence the global warming.
 
 ## Goals of this project: 
 
 (1) establish a model that can predict earth surface temperature based on time series;
 
-(2) improve the model by multivariate method or with various exogenous features (carbon dioxide concentration, world population, world urban population); 
+(2) improve the forecasts by various models and by multivariate times series technics (exogenous features, cointegration, Granger causality analysis, VECM, additional regressors, etc); 
 
 (3) analyze the relationship between temperature and various factors; 
 
