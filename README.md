@@ -25,12 +25,16 @@ Global warming is a top topic of common concern. It is important to understand h
 
 *  globalwarming.ipynb, -- the main jupyter notebook of this project, containing 6 parts: 
 1. Data collection and cleaning
-2. Explanatory Data Analysis, statistics, relevant social and environment analysis
+2. Exploratory Data Analysis, statistics, relevant social and environment analysis
 3. Preprocessing
-4. Time series modeling and evaluation
-5. Cointegration tests
-6. Conclusions
-7. Model improving
+4. Various models, ARIMA, SARIMAX, Grid Search
+5. Cointegration analysis and tests -- foundation of exogenous variables
+6. Model improving -- ARIMAX with exogenous features, Grid Search
+7. Granger Causality analysis and explanation -- foundation of multivariates
+8. More models -- Vector Auto Regression (VAR) and Grid Search for multivariate time series
+9. More models -- Vector Error Correction Model (VECM) and Grid Search for multivariate time series
+10. More models -- Fbprophet
+11. Conclusions
 
 *  webscraping.ipynb, -- the coding jupyter notebook for web scraping population data from www.johnstonsarchive.net
 
@@ -51,19 +55,23 @@ Global warming is a top topic of common concern. It is important to understand h
 
 ### Third industrial revolution time (1950s) is watershed for global warming:
 
-Analysis showed that the third industrial revolution time (1950s) is a watershed. Before third industrial revolution, the earth surface temperature increased slowly, only 8% over 200 years. But after third industrial revolution, earth surface temperature increased another 12% for recent 60 years. Coincidentally, carbon dioxide concentration increase also accelerate after 1950s. Between 1750s to 1950s, the carbon dioxide concentration in air increased around12%, but from 1950s to 2010s, it raised another 30%. This is a hint that carbon dioxide is related to earth surface temperature. Carbon dioxide is the major greenhouse gas that contribute to global warming, most people believe so although it not 100% sure that carbon dioxide emission caused the global warming. 
+Analysis showed that the third industrial revolution time (1950s) is a watershed. Before third industrial revolution, the earth surface temperature increased slowly, only 8% over 200 years. But after third industrial revolution, earth surface temperature increased another 12% for recent 60 years. Coincidentally, carbon dioxide concentration increase also accelerate after 1950s. Between 1750s to 1950s, the carbon dioxide concentration in air only increased around 12%, but from 1950s to 2010s, it raised another 30%. This is a hint that carbon dioxide concentration rising is related to earth surface temperature. Carbon dioxide is the major greenhouse gas that contribute to global warming, most people believe so although it not 100% sure that carbon dioxide emission caused the global warming. 
 
 A graph is shown as following: 
 
 ![image](https://user-images.githubusercontent.com/64159084/89968826-e5c34580-dc22-11ea-8502-5909935cd723.png)
 
-### Very good forecast results can be given by ARIMA:
+### Best models in this project are ARIMAX with exogenous variables and VECM:
 
-Using time series modeling (ARIMA and SARIMAX), earth surface temperature can be relatively accurately forecasted. In section 4, metrics mean absolute error, mean square error and root mean square error were used to evaluate forecast results. The best result for 11 years forecast gave MSE: 0.016, RMSE: 0.128 and MAE: 0.102. Comparing to real observations value around 9 celcius from 2004 to 2015, this error is very tiny.
+The main reasons that ARIMAX model with exogenous variables(CO2 and urban population) and VECM work better in this case than ARIMA, SARIMAX, VAR and FBprohet is:
+(1) Based on the nature of this case described in 11.3, it makes more sense to use CO2 and urban population as exogenous variables to assist forecast of temperature, rather than making them all to be equivalently interactive series in a VAR model;
+(2) Combining stationary levels (VECM imposes additional restriction due to the existence of non-stationary but co-integrated data forms and utilize co-integration restriction infromation of the 3 time series) and differences from all time series in VECM also make more sense than making them all to be equivalently interactive series in a VAR model;
+(3) Ignoring the information that CO2 time series and urban population time series provide (ARIMA models) definitely reduce the accuracy of the modeling. And, treating CO2 time series and urban population time series as additional regressors (Fbprophet) does not make sense as (1) and (2).
+(4) The yearly earth surface temperature time series don't have seasonality, so SARIMAX model does not improve results.
 
-### CO2 concentration change and world urban population change are related to earth surface temperature change:
+### CO2 concentration change and world urban population change influenced earth surface temperature change:
 
-Coint and Johansen tests showed that there is correlation between earth surface temperature raise and carbon dioxide concentration raise. And there may also be correlation between earth surface temperature and world urban population (number of observations are limited since world population data does not contain data before 1950). These are consistent with explanatory analysis in project. The world total population and rural population raise are not considered correlated to earth surface temperature raise as shown by hypothesis tests.
+Cointegration analysis and Granger Causality analysis show that CO2 concentration in air has strong influence to the earth surface temperature change (it is not scientifically rigorous to conclude that CO2 concentration cause the global warming, but from my statistical analysis, CO2 concentration greatly influenced temperature raising). When it comes to population, analysis in this project show that world population does not directly influence the earth surface temperature, but the world's urban population has influence to earth surface temperature change.
 
 ## Project presentation link:
 
