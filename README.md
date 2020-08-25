@@ -64,10 +64,13 @@ A graph is shown as following:
 ### Best models in this project are ARIMAX with exogenous variables and VECM:
 
 The main reasons that ARIMAX model with exogenous variables(CO2 and urban population) and VECM work better in this case than ARIMA, SARIMAX, VAR and FBprohet is:
-(1) Based on the nature of this case described in 11.3, it makes more sense to use CO2 and urban population as exogenous variables to assist forecast of temperature, rather than making them all to be equivalently interactive series in a VAR model;
+(1) Based on the nature of this case described in Section 11.3 in globalwarming.ipynb, it makes more sense to use CO2 and urban population as exogenous variables to assist forecast of temperature, rather than making them all to be equivalently interactive series in a VAR model;
 (2) Combining stationary levels (VECM imposes additional restriction due to the existence of non-stationary but co-integrated data forms and utilize co-integration restriction infromation of the 3 time series) and differences from all time series in VECM also make more sense than making them all to be equivalently interactive series in a VAR model;
 (3) Ignoring the information that CO2 time series and urban population time series provide (ARIMA models) definitely reduce the accuracy of the modeling. And, treating CO2 time series and urban population time series as additional regressors (Fbprophet) does not make sense as (1) and (2).
 (4) The yearly earth surface temperature time series don't have seasonality, so SARIMAX model does not improve results.
+
+please check out the prediction of the earth surface temperature for 53 years: 
+![image](https://user-images.githubusercontent.com/64159084/91113211-004de380-e653-11ea-87d7-9d2a2970b6e8.png)
 
 ### CO2 concentration change and world urban population change influenced earth surface temperature change:
 
