@@ -1,17 +1,17 @@
 # Global-Warming-Analysis-and-Prediction
 
 ## Brief background
-Global warming is a top topic of common concern. It is important to understand how earth surface temperature is changing, the trend and to predict, which has guiding significance to many fields (agriculture, energy-efficiency, emmission control, restructuring energy industry, etc). To predict future earth surface temperature can be a pure time series problem, but global warming is also related to other factors, such as greenhouse gases emission, human activities, etc. In this project, I used various time series models, cointegration and causality analysis to investigate the earth surface temperature change, developed a model to predict future temperature and also analyzed how other features (CO2, population) influence the global warming.
+Global warming is a top topic of common concern. It is important to understand how earth surface temperature is changing, the trend and to predict, which has guiding significance to many fields (agriculture, energy-efficiency, emmission control, restructuring energy industry, etc). To predict future earth surface temperature can be a pure time series problem, but global warming is also related to other factors, such as greenhouse gases emission, human activities, etc. In this project, I used various time series models, cointegration and causality analysis to investigate the earth surface temperature change, developed models to predict future temperature and also analyzed how other features (CO2, population) influence the global warming.
 
 ## Goals of this project: 
 
-(1) establish a model that can predict earth surface temperature based on time series modeling;
+(1) establish models that can predict earth surface temperature based on various time series modeling;
 
 (2) improve the forecasts by various models and by multivariate times series technics (exogenous features, cointegration, Granger causality analysis, VECM, additional regressors, etc); 
 
-(3) analyze the relationship between temperature and various factors; 
+(3) analyze the relationship (cointegration) between temperature and various factors; 
 
-(4) understand how various factors affect the global warming trend.
+(4) understand how various factors affect the global warming trend, assess the causal relationships.
 
 ## Resources of data:
 
@@ -50,8 +50,10 @@ Global warming is a top topic of common concern. It is important to understand h
 
 *  'co2history.csv' -- historical carbon dioxide data concentration data
 
+*  'Global Warming Analysis and Temperature Forecast.pdf' -- presentation of this project
 
-## Some conclusions: 
+
+## Some conclusions of this project: 
 
 ### Third industrial revolution time (1950s) is watershed for global warming:
 
