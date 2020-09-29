@@ -55,7 +55,7 @@ Global warming is a top topic of common concern. It is important to understand h
 
 ## Some conclusions of this project: 
 
-### Third industrial revolution time (1950s) is watershed for global warming:
+### Third industrial revolution time (1950s) is a watershed for global warming:
 
 Analysis in this project showed that the third industrial revolution time (1950s) is a watershed. Before third industrial revolution, the earth surface temperature increased slowly, only 8% over 200 years. But after third industrial revolution, earth surface temperature increased another 12% for recent 60 years. Coincidentally, carbon dioxide concentration increase also accelerate after 1950s. Between 1750s to 1950s, the carbon dioxide concentration in air only increased around 12%, but from 1950s to 2010s, it raised another 30%. This is a hint that carbon dioxide concentration rising is related to earth surface temperature. Carbon dioxide is the major greenhouse gas that contribute to global warming, most people believe so although it not 100% sure that carbon dioxide emission caused the global warming. 
 
